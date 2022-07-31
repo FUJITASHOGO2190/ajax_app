@@ -12,7 +12,6 @@ const buildHTML = (XHR) => {
   return html;
 };
 
-
 function post (){
   const submit = document.getElementById("submit");
   submit.addEventListener("click", (e) => {
@@ -20,7 +19,7 @@ function post (){
     const form = document.getElementById("form");
     const formData = new FormData(form);
     const XHR = new XMLHttpRequest();
-    XHR.open("POst", "/post", true);
+    XHR.open("POst", "/posts", true);
     XHR.responseType = "json";
     XHR.send(formData);
     XHR.onload = () => {
